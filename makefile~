@@ -1,0 +1,11 @@
+GCC = gcc -c 
+
+all: randTest.c
+	$(GCC) randTest.c -o randomEx  
+
+clean:
+	rm *~
+	rm *.o
+
+run:
+	./randomEx
