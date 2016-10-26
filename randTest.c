@@ -23,13 +23,16 @@ int main(){
   int arr[n];
   
   for (n = 0; n < 10; n++){
-    //* (arr + n) = 
     arr[n] = generateRandInt();
     printf("random number: %d\n", arr[n]);
-    //printf("index %d: %d\n", n, * (arr + n) );
   }
-  
-  //  int fd = 
-//generateRandInt();
+  umask(0000);
+  int fd = open("file", O_CREAT | O_WRONLY, 0644);
+  for (n = 0; n < 10; n++)
+    write(fd, arr + n, 4);
+  fd = open("file", O_RDONLY);
+  int b;
+  for (n = 0; n < 10; n++)
+    read(fd, &b, 4);
   return 0;
 }
