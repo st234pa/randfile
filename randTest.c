@@ -34,5 +34,7 @@ int main(){
   int b;
   for (n = 0; n < 10; n++)
     read(fd, &b, 4);
+
+  close(fd);
   return 0;
 }
