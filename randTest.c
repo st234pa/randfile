@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
@@ -17,8 +18,10 @@ int generateRandInt(){
 
 
 int main(){
-  int arr[n];
   int n;
+  n = 10;
+  int arr[n];
+  
   for (n = 0; n < 10; n++){
     //* (arr + n) = 
     arr[n] = generateRandInt();
