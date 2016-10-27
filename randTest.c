@@ -63,6 +63,6 @@ int main(){
   for (n = 0; n < randNum; n++){
     printf("Random Number: %d\n", arrLoad[n]);
   }
-    
+  
   return 0;
 }
